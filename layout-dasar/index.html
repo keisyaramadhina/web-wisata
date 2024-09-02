@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Dasar</title>
+    <style>
+        .header{
+            background-color: #eee;
+            min-height: 50px;
+            text-align: center;
+        }
+        .content{
+            background-color: #b1acac;
+            min-height: 500px;
+            overflow: auto;
+        }
+        .footer{
+            background-color: #ccc;
+            min-width: 50px;
+            padding: 20px;
+            text-align: center;
+        }
+        .container{
+            width: 800px;
+            margin: 0 auto;
+        }
+        .menu ul{
+            padding: 0;
+        }
+        .menu ul li{
+            display: inline-block;
+            position: relative;
+        }
+        .menu ul li a{
+            padding: 10px 20px;
+            text-decoration: none;
+        }
+        .logo img{
+            width: 200px;
+        }
+        .thumbnail{
+            background-color: white;
+            text-align: center;
+            padding: 10px;
+            width: 225px;
+            margin: 10px;
+            float: left;
+        }
+        .thumbnail img{
+            width: 100%;
+        }
+        .tombol{
+            background-color: orangered;
+            color: #eee;
+            text-decoration: none;
+            padding: 10px;
+            border-radius: 15px;
+        }
+        .tombol:hover{
+            border-radius: 15px;
+            background-color: #eee;
+            color: orangered;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-color: orangered;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            animation: pulse-animation 2s infinite;
+        }
+        @keyframes pulse-animation {
+            0%{
+                box-shadow: 0 0 0 0px orangered;
+            }
+            100%{
+                box-shadow: 0 0 0 20px rgba(255, 68, 0, 0.452)
+            }
+        }
+        ul.submenu{
+            background-color: #eee;
+            border: 1px solid #ccc;
+            text-align: left;
+            position: absolute;
+            top: 20px;
+            left: 0;
+            display: none;
+        }
+        ul.submenu li{
+            display: block;
+        }
+        ul.submenu li a{
+
+            display: block;
+            padding: 5px 10px;
+        }
+        .menu ul li:hover ul.submenu{
+            display: block;
+        }
+        .jumbotron{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <img src="img/name.png" alt="">
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li>
+                        <a href="">About</a>
+                        <ul class="submenu">
+                            <li><a href="">CV</a></li>
+                            <li><a href="">Education</a></li>
+                            <li><a href="">Portofolio</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="jumbotron">
+            <h2>Welcome to My Homepage</h2>
+            <p>selamat datang di website saya, silahkan bereksplorasi dan berimajinasi</p>
+        </div>
+
+        <div class="content">
+            <h2 style="margin-left: 10px">Our Product</h2>
+            <div class="thumbnail">
+                <img src="img/1.png" alt="S24 Ultra">
+                <h2>Samsung Galaxy S24 Ultra</h2>
+                <p>Rp 18.090.000 </p>
+                <a href="" class="tombol">Detail</a>
+            </div>
+            <div class="thumbnail">
+                <img src="img/2.png" alt="Z Fold5 5G">
+                <h2>Samsung Galaxy Z Fold5 5G</h2>
+                <p>Rp 17.808.000</p>
+                <a href="" class="tombol">Detail</a>
+            </div>
+            <div class="thumbnail">
+                <img src="img/3.png" alt="S23 Ultra 5G">
+                <h2>Samsung Galaxy S23 Ultra 5G</h2>
+                <p>Rp 14.990.000</p>
+                <a href="" class="tombol">Detail</a>
+            </div>
+            <div class="thumbnail">
+                <img src="img/4.png" alt="S24+">
+                <h2>Samsung Galaxy S24+</h2>
+                <p>Rp 15.355.000</p>
+                <a href="" class="tombol">Detail</a>
+            </div>
+            <div class="thumbnail">
+                <img src="img/5.png" alt="Z Flip5 5G">
+                <h2>Samsung Galaxy Z Flip5 5G</h2>
+                <p>Rp 250.000</p>
+                <a href="" class="tombol">Detail</a>
+            </div>
+            <div class="thumbnail">
+                <img src="img/6.png" alt="S23 5G">
+                <h2>Samsung Galaxy S23 5G</h2>
+                <p>Rp 250.000</p>
+                <a href="" class="tombol">Detail</a>
+            </div>
+            <div class="thumbnail">
+                <img src="img/7.png" alt="S22 Ultra">
+                <h2>Samsung Galaxy S22 Ultra</h2>
+                <p>Rp 250.000</p>
+                <a href="" class="tombol">Detail</a>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Copyright 2024</p>
+        </div>
+    </div>
+</body>
+</html>

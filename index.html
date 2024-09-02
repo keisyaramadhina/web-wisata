@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rerofya</title>
+</head>
+<body>
+    <div class="container">
+        <img src="Capture-15.png" class="car">
+        <div class="button">
+            <button onclick="play()">play</button>
+            <button onclick="pause()">pause</button>
+        </div>
+    </div>
+
+    <script>
+        function play() {
+            const car = document.querySelector('.car')
+            car.style.animationPlayState = 'running'
+        }
+        function pause() {
+            const car = document.querySelector('.car')
+            car.style.animationPlayState = 'paused'
+        }
+    </script>
+</body>
+</html>
